@@ -1,15 +1,36 @@
 h1 {
-    font-size: 500%;
+    text-align: center;
+    font-size: 68px;
 }
 ul {
-    padding-left: 0px;
     list-style: none;
+    font-size: 24px;
+
+    padding-left: 0px;
+    margin-left: 45px;
 }
 
 .notepad-app {
-    text-align: center;
+    max-width: 550px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.new-note {
+    font-size: 24px;
+
+    margin-left: 50px;
 }
 
 .toggle {
     margin-left: -14px;
 }
+
+.destroy {
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+  }
+  
