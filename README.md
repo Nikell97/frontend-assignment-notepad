@@ -1,2 +1,0 @@
-# frontend-assignment-notepad
- 
