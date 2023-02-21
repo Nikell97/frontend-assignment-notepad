@@ -1,7 +1,13 @@
 h1 {
-    text-align: center;
-
     font-size: 500%;
+}
+ul {
+    padding-left: 0px;
+    list-style: none;
+}
+
+.notepad-app {
+    text-align: center;
 }
 
 .toggle {
