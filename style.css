@@ -10,6 +10,21 @@ ul {
     margin-left: 45px;
 }
 
+li {
+    display: flex;
+    background-color: #eee;
+    margin: 5px;
+    padding: 5px;
+    align-items: center;
+  }
+  
+  li>span {
+    margin-left: auto;
+    background-color: #aaa;
+    padding: 5px;
+    cursor: pointer;
+  }
+
 .notepad-app {
     max-width: 550px;
 
@@ -27,10 +42,10 @@ ul {
     margin-left: -14px;
 }
 
-.destroy {
-    padding-left: 0px;
-    padding-top: 0px;
-    padding-right: 0px;
-    padding-bottom: 0px;
+.delete {
+    padding: 0px;
+    border: 0px;
+
+    background-color: transparent;
   }
   
