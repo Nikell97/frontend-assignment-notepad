@@ -1,6 +1,9 @@
 h1 {
+    text-align: center;
+
     font-size: 500%;
 }
+
 ul {
     padding-left: 0px;
     list-style: none;
@@ -12,4 +15,17 @@ ul {
 
 .toggle {
     margin-left: -14px;
+  }
+
+
+.toggle-all + label:before {
+	content: '❯';
+	font-size: 22px;
+	color: #e6e6e6;
+	padding: 10px 27px 10px 27px;
 }
+
+.toggle-all:checked + label:before {
+	color: #737373;
+}
+
