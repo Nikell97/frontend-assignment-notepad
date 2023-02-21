@@ -1,31 +1,51 @@
 h1 {
     text-align: center;
 
-    font-size: 500%;
+    font-size: 68px;
 }
 
 ul {
-    padding-left: 0px;
     list-style: none;
+    font-size: 24px;
+
+    padding-left: 0px;
+    margin-left: 45px;
 }
 
 .notepad-app {
-    text-align: center;
+    max-width: 550px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.new-note {
+    font-size: 24px;
 }
 
 .toggle {
     margin-left: -14px;
+
   }
-
-
-.toggle-all + label:before {
-	content: '❯';
-	font-size: 22px;
-	color: #e6e6e6;
-	padding: 10px 27px 10px 27px;
-}
 
 .toggle-all:checked + label:before {
 	color: #737373;
 }
+
+.destroy {
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+  }
+
+  .toggle-all + label:before {
+    content: "🔽";
+  }
+
+  .toggle-all {
+    display: none;
+  }
+
+  
 
