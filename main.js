@@ -4,6 +4,7 @@ let form = document.querySelector('form');
 let showAllButton = document.getElementById('all');
 let showActiveButton = document.getElementById('active');
 let showCompletedButton = document.getElementById('completed');
+let clearCompletedButton = document.getElementById('clear');
 
 form.onsubmit = async event => {
   event.preventDefault();
@@ -69,6 +70,15 @@ showCompletedButton.addEventListener("click", function() {
     }
   }
 });
+
+clearCompletedButton.addEventListener("click", function(){
+  let notes = document.getElementsByClassName('item');
+  for (note of notes){
+    if (note.firstElementChild.checked == true){
+      note.remove();
+    }
+  }
+})
 
 document.getElementById("toggle-all").onclick = function (){
   let notes = document.getElementsByClassName("toggle");
