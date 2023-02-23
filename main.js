@@ -1,7 +1,9 @@
 let noteList = document.querySelector(".note-list");
 let noteDeleteButton = document.getElementsByClassName("delete");
 let form = document.querySelector('form');
-let hideButton = document.getElementById('button')
+let showAllButton = document.getElementById('all');
+let showActiveButton = document.getElementById('active');
+let showCompletedButton = document.getElementById('completed');
 
 form.onsubmit = async event => {
   event.preventDefault();
@@ -34,28 +36,38 @@ function printItem() {
     form.reset();
 }
 
-hideButton.addEventListener("click", function() {
+showAllButton.addEventListener("click", function() {
   let checkbox = document.getElementsByClassName("toggle");
-  if (checkbox.checked){
-    console.log("Checkbox is checked");
-  }
-  else{
-    console.log("Checkbox isn't checked")
-  }
-  
-  //noteList = document.getElementsByClassName("item");
-  
-  
-  
-  /*for (i = 0; i < noteList.length; i++)
+  for (box of checkbox)
   {
-    let checkbox = [i].firstChild;
-    console.log(checkbox);
-    if (checkbox == true)
-    {
-    
+      box.parentNode.style.display = 'flex';
+  }
+});
+
+showActiveButton.addEventListener("click", function() {
+  let checkbox = document.getElementsByClassName("toggle");
+  for (box of checkbox)
+  {
+    if (box.checked == true){
+      box.parentNode.style.display = 'none';
     }
-  }*/
+    else {
+      box.parentNode.style.display = 'flex';
+    }
+  }
+});
+
+showCompletedButton.addEventListener("click", function() {
+  let checkbox = document.getElementsByClassName("toggle");
+  for (box of checkbox)
+  {
+    if (box.checked == false){
+      box.parentNode.style.display = 'none';
+    }
+    else {
+      box.parentNode.style.display = 'flex';
+    }
+  }
 });
 
 document.getElementById("toggle-all").onclick = function (){
