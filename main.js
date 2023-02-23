@@ -36,7 +36,12 @@ function printItem() {
 
 hideButton.addEventListener("click", function() {
   let checkbox = document.getElementsByClassName("toggle");
-  console.log(checkbox.checked);
+  if (checkbox.checked){
+    console.log("Checkbox is checked");
+  }
+  else{
+    console.log("Checkbox isn't checked")
+  }
   
   //noteList = document.getElementsByClassName("item");
   
@@ -52,3 +57,11 @@ hideButton.addEventListener("click", function() {
     }
   }*/
 });
+
+document.getElementById("toggle-all").onclick = function (){
+  let notes = document.getElementsByClassName("toggle");
+  for (let i = 0; i < notes.length; i++)
+  {
+    notes[i].checked = this.checked;
+  }
+};
