@@ -42,6 +42,7 @@ function printItem() {
   updateNumberOfActiveNotes();
 }
 
+//updates counter that shows number of current active notes
 function updateNumberOfActiveNotes() {
   activeNotes = 0;
   let notes = document.getElementsByClassName("toggle");
@@ -53,6 +54,7 @@ function updateNumberOfActiveNotes() {
   numberOfActiveNotesDisplay.innerHTML = "Number of active notes: " + activeNotes;
 }
 
+//removes any filter to show all notes
 showAllButton.addEventListener("click", function () {
   let checkbox = document.getElementsByClassName("toggle");
   for (box of checkbox) {
@@ -60,6 +62,7 @@ showAllButton.addEventListener("click", function () {
   }
 });
 
+//filters all notes so that only active notes are shown
 showActiveButton.addEventListener("click", function () {
   let checkbox = document.getElementsByClassName("toggle");
   for (box of checkbox) {
@@ -72,6 +75,7 @@ showActiveButton.addEventListener("click", function () {
   }
 });
 
+//filters all notes so that only completed notes are shown
 showCompletedButton.addEventListener("click", function () {
   let checkbox = document.getElementsByClassName("toggle");
   for (box of checkbox) {
@@ -84,6 +88,8 @@ showCompletedButton.addEventListener("click", function () {
   }
 });
 
+
+//removes all notes that are checked as completed when pressing the Clear Completed button
 clearCompletedButton.addEventListener("click", function() {
   let items = document.querySelectorAll(".item");
   for (let i = 0; i < items.length; i++) {
@@ -95,6 +101,8 @@ clearCompletedButton.addEventListener("click", function() {
   updateNumberOfActiveNotes();
 });
 
+
+//checks or unchecks all notes
 document.getElementById("toggle-all").onclick = function (){
   let notes = document.getElementsByClassName("toggle");
   for (let i = 0; i < notes.length; i++) {
