@@ -84,14 +84,16 @@ showCompletedButton.addEventListener("click", function () {
   }
 });
 
-clearCompletedButton.addEventListener("click", function(){
-  let notes = document.getElementsByClassName('item');
-  for (note of notes){
-    if (note.firstElementChild.checked == true){
-      note.remove();
+clearCompletedButton.addEventListener("click", function() {
+  let items = document.querySelectorAll(".item");
+  for (let i = 0; i < items.length; i++) {
+    let checkbox = items[i].querySelector(".toggle"); // fetches the "done button" for each li element
+    if (checkbox.checked) {
+      items[i].remove();
     }
   }
-})
+  updateNumberOfActiveNotes();
+});
 
 document.getElementById("toggle-all").onclick = function (){
   let notes = document.getElementsByClassName("toggle");
