@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test';
+const { test, expect } = require('@playwright/test');
 
 //https://nikell97.github.io/frontend-assignment-notepad/
 
@@ -30,5 +30,5 @@ test.beforeEach(async ({ page }) => {
     let noteListItemText = await noteListItem.$('>:nth-child(2)');
 
     // Check that input is empty.
-    await expect(noteListItemText.toHaveText('a'));
+    await expect(noteListItemText.textContent()).resolves.toMatch('a');
   }); 
