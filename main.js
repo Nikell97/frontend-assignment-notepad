@@ -54,7 +54,7 @@ function updateNumberOfActiveNotes() {
       activeNotes += 1;
     }
   }
-  numberOfActiveNotesDisplay.innerHTML = "Number of active notes: " + activeNotes;
+  numberOfActiveNotesDisplay.textContent = "Number of active notes: " + activeNotes;
 }
 
 //removes any filter to show all notes
