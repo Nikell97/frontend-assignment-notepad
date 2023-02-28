@@ -9,6 +9,8 @@ let clearCompletedButton = document.getElementById('clear');
 
 let activeNotes = 0;
 
+clearCompletedButton.style.display = "none";
+
 form.onsubmit = async event => {
   event.preventDefault();
   printItem();
@@ -117,6 +119,7 @@ clearCompletedButton.addEventListener("click", function() {
     }
   }
   updateNumberOfActiveNotes();
+  hideClearCompletedButton();
 });
 
 

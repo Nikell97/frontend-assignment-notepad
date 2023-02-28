@@ -88,7 +88,15 @@ label[for="toggle-all"] {
   margin-left: 0px;
 }
 
-.filters {
+#numberOfActiveNotes {
+  float: left;
+  text-align: left;
+  margin: 0px;
+
+  color: #000000;
+}
+
+#filters {
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -96,11 +104,26 @@ label[for="toggle-all"] {
 	right: 0;
 	left: 0;
 }
+#filters li {
+  display: inline;
+}
+
+#clear {
+  float: right;
+  position: relative;
+  text-decoration: none;
+}
 
 #footer {
   color: #777;
   padding: 10px 15px;
   height: 20px;
   text-align: center;
-  border-top: 1px solid #e6e6e6;
+  
+  padding: 10px;
+
+  border: 1px;
+  border-top: 0px;
+  border-style: solid;
+  border-color:#aaa;
 }
