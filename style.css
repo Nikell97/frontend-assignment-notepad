@@ -58,7 +58,8 @@ form {
 }
 
 label[for="toggle-all"] {
-  margin-top: center;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 
@@ -88,4 +89,21 @@ label[for="toggle-all"] {
 
 .toggle {
   margin-left: 0px;
+}
+
+.filters {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	position: absolute;
+	right: 0;
+	left: 0;
+}
+
+#footer {
+  color: #777;
+  padding: 10px 15px;
+  height: 20px;
+  text-align: center;
+  border-top: 1px solid #e6e6e6;
 }
