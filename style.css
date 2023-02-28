@@ -4,29 +4,6 @@ h1 {
   font-size: 68px;
 }
 
-ul {
-  list-style: none;
-  font-size: 24px;
-
-  padding-left: 0px;
-  margin-left: 8px;
-}
-
-li {
-  display: flex;
-  background-color: #eee;
-  margin: 5px;
-  padding: 5px;
-  align-items: center;
-}
-
-li>span {
-  margin-left: auto;
-  background-color: #aaa;
-  padding: 5px;
-  cursor: pointer;
-}
-
 .notepad-app {
   max-width: 550px;
 
@@ -58,9 +35,9 @@ form {
 }
 
 label[for="toggle-all"] {
-  margin-top: center;
+  margin-top: auto;
+  margin-bottom: auto;
 }
-
 
 .toggle-all {
   display: none;
@@ -74,11 +51,25 @@ label[for="toggle-all"] {
   border-color:#aaa;
 }
 
+.toggle {
+  margin-left: 0px;
+}
+
 .note-list {
+  list-style: none;
+  font-size: 24px;
+
+  padding-left: 0px;
+  margin-left: 8px;
   margin: 0px;
 }
 
 .item {
+  display: flex;
+  background-color: #eee;
+  padding: 5px;
+  align-items: center;
+
   margin:0px;
   border: 1px;
   border-top: 0px;
@@ -86,6 +77,9 @@ label[for="toggle-all"] {
   border-color:#aaa;
 }
 
-.toggle {
-  margin-left: 0px;
+.item>span {
+  margin-left: auto;
+  background-color: #aaa;
+  padding: 5px;
+  cursor: pointer;
 }
