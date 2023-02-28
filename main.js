@@ -24,6 +24,9 @@ function printItem() {
 
   noteListDoneButton.className = "toggle";
   noteListDoneButton.type = "checkbox";
+  noteListDoneButton.addEventListener("click", function () {
+    updateNumberOfActiveNotes();
+  })
 
   noteListText.textContent = " " + form.input.value + " ";
 
