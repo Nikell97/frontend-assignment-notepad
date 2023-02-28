@@ -27,6 +27,7 @@ function printItem() {
   noteListDoneButton.addEventListener("click", function () {
     updateNumberOfActiveNotes();
     hideClearCompletedButton();
+    changeClearedNoteDisplay();
   })
 
   noteListText.textContent = " " + form.input.value + " ";
@@ -45,6 +46,7 @@ function printItem() {
   form.reset();
   updateNumberOfActiveNotes();
   hideClearCompletedButton();
+  changeClearedNoteDisplay();
 }
 
 //updates counter that shows number of current active notes
@@ -68,6 +70,18 @@ function hideClearCompletedButton() {
     }
     else {
       clearCompletedButton.style.display = "none";
+    }
+  }
+}
+
+function changeClearedNoteDisplay() {
+  let checkbox = document.getElementsByClassName("toggle");
+  for (box of checkbox){
+    if (box.checked) {
+      box.nextElementSibling.classList.add("completed");
+    }
+    else {
+      box.nextElementSibling.classList.remove("completed");
     }
   }
 }
