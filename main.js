@@ -26,6 +26,7 @@ function printItem() {
   noteListDoneButton.type = "checkbox";
   noteListDoneButton.addEventListener("click", function () {
     updateNumberOfActiveNotes();
+    hideClearCompletedButton();
   })
 
   noteListText.textContent = " " + form.input.value + " ";
@@ -43,6 +44,7 @@ function printItem() {
   noteListItem.append(noteListDeleteButton);
   form.reset();
   updateNumberOfActiveNotes();
+  hideClearCompletedButton();
 }
 
 //updates counter that shows number of current active notes
@@ -55,6 +57,19 @@ function updateNumberOfActiveNotes() {
     }
   }
   numberOfActiveNotesDisplay.textContent = "Number of active notes: " + activeNotes;
+}
+
+function hideClearCompletedButton() {
+  let checkbox = document.getElementsByClassName("toggle");
+  for (box of checkbox) {
+    if (box.checked){
+      clearCompletedButton.style.display = "flex";
+      return;
+    }
+    else {
+      clearCompletedButton.style.display = "none";
+    }
+  }
 }
 
 //removes any filter to show all notes
@@ -112,4 +127,5 @@ document.getElementById("toggle-all").onclick = function (){
     notes[i].checked = this.checked;
   }
   updateNumberOfActiveNotes();
+  hideClearCompletedButton();
 };
