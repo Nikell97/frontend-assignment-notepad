@@ -111,4 +111,5 @@ document.getElementById("toggle-all").onclick = function (){
   for (let i = 0; i < notes.length; i++) {
     notes[i].checked = this.checked;
   }
+  updateNumberOfActiveNotes();
 };
