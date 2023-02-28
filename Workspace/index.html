@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notepad</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Notepad</h1>
+  </header>
+  <section class="notepad-app">
+    <section class="main">
+
+      <div id="input-box">
+        <input class="toggle-all" id="toggle-all" type="checkbox">
+        <label for="toggle-all"></label>
+        <form>
+          <input name="input" class="new-note" placeholder="What needs to be done?">
+        </form>
+      </div>
+
+      <ul class="note-list">
+       <!-- Here goes the notes! --> 
+      </ul>
+    </section>
+    
+    <footer id="footer">
+      <p id="numberOfActiveNotes">Number of active notes: 0</p>
+      <ul id="filters">
+        <li><button type="button" id="all">All</button></li>
+        <li><button type="button" id="active">Active</button></li>
+        <li><button type="button" id="completed">Completed</button></li>
+      </ul>
+      <button type="button" id="clear">Clear Completed</button>
+    </footer>
+  </section>
+</body>
+</html>
