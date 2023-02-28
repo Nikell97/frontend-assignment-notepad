@@ -133,7 +133,7 @@ clearCompletedButton.addEventListener("click", function() {
     }
   }
   updateNumberOfActiveNotes();
-  hideClearCompletedButton();
+  clearCompletedButton.style.display = "none";
 });
 
 

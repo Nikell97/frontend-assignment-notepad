@@ -9,6 +9,8 @@ h1 {
 
   margin-left: auto;
   margin-right: auto;
+
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
 }
 
 form {
@@ -112,9 +114,11 @@ label[for="toggle-all"] {
   float: right;
   position: relative;
   text-decoration: none;
+  max-width: 109px;
 }
 
 #footer {
+  display: block;
   color: #777;
   padding: 10px 15px;
   height: 20px;
@@ -131,4 +135,42 @@ label[for="toggle-all"] {
 .completed{
   color: #d9d9d9;
   text-decoration: line-through;
+}
+
+@media (max-width: 550px){
+  #footer {
+    display: flex;
+    flex-wrap: wrap;
+    height: auto;
+  }
+  #numberOfActiveNotes {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #filters {
+    position: unset;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #clear {
+    margin-left: auto;
+    margin-top: 0px;
+  }
+}
+@media (max-width: 469px){
+  #clear {
+    margin-right: auto;
+    margin-top: 10px;
+  }
+}
+@media (max-width: 360px){
+  #clear {
+    margin-top: 0px;
+  }
+}
+@media (max-width: 302px){
+  #clear {
+    margin-top: 10px;
+  }
 }
