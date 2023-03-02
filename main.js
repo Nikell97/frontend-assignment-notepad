@@ -39,7 +39,7 @@ function printItem() {
     noteListItem.remove();
     updateNumberOfActiveNotes();
   })
-  noteListDeleteButton.innerHTML = "❌"
+  noteListDeleteButton.textContent = "❌"
 
   noteList.append(noteListItem)
   noteListItem.append(noteListDoneButton);
