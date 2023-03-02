@@ -22,7 +22,6 @@ test('write one new note', async ({ page }) => {
 
   let noteListItemText = await noteListItem.$('>:nth-child(2)');
 
-  // Check that input is empty.
   await expect(noteListItemText.textContent()).resolves.toMatch('a');
 });
 
