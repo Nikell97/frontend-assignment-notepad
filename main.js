@@ -63,6 +63,7 @@ function updateNumberOfActiveNotes() {
   numberOfActiveNotesDisplay.textContent = "Number of active notes: " + activeNotes;
 }
 
+//hides the Clear Completed button if no notes are marked as complete
 function hideClearCompletedButton() {
   let checkbox = document.getElementsByClassName("toggle");
   for (box of checkbox) {
@@ -76,6 +77,8 @@ function hideClearCompletedButton() {
   }
 }
 
+//adds or removes the "completed" class to notes based on if they are marked as completed or not (checked checkbox)
+//this is done for the purpose of altering the appearance easily in CSS
 function changeClearedNoteDisplay() {
   let checkbox = document.getElementsByClassName("toggle");
   for (box of checkbox){

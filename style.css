@@ -1,5 +1,6 @@
 h1 {
   text-align: center;
+  color: rgba(175, 47, 47, 0.15);
 
   font-size: 68px;
 }
@@ -80,10 +81,10 @@ label[for="toggle-all"] {
 }
 
 .item>span {
-  margin-left: auto;
-  background-color: #aaa;
+  margin-left: auto;  
   padding: 5px;
   cursor: pointer;
+  opacity: 50%;
 }
 
 .toggle {
@@ -110,11 +111,26 @@ label[for="toggle-all"] {
   display: inline;
 }
 
+#filters li button, #clear {
+    color: inherit;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: 3px;
+}
+
+#filters li button:hover{
+  border-color: black;
+}
+
+#clear:hover {
+  border-color: black;
+}
+
 #clear {
   float: right;
   position: relative;
   text-decoration: none;
-  max-width: 109px;
+  max-width: auto;
 }
 
 #footer {
@@ -135,6 +151,27 @@ label[for="toggle-all"] {
 .completed{
   color: #d9d9d9;
   text-decoration: line-through;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  border: 2px solid black;
+}
+
+input[type="checkbox"]:checked:before {
+  display:flex;
+  content: "\2714";
+  font-size: 125%;
+  color: green;
+  text-align: center;
+  justify-content: center;
+}
+
+.delete:hover {
+  opacity: 100%;
 }
 
 @media (max-width: 550px){
